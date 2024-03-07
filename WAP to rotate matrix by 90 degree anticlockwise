@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main(){
+int m;
+cout<<"enter the row";
+cin>>m;
+int n;
+cout<<"enter the column";
+cin>>n;
+int ar[m][n];
+//taking input
+for(int i=0;i<m;i++){//i=rows
+        for(int j=0;j<n;j++){//j=column
+            cin>>ar[i][j];
+        }
+        cout<<endl;
+    }
+    //transwpose
+    for(int j=0;j<n;j++){//i=rows
+        for(int i=0;i<m;i++){//j=column
+            cout<<ar[i][j];
+        }
+        cout<<endl;
+    }
+    //reverse
+    for(int j=0;j<n;j++){//i=rows
+        for(int i=0;i<m/2;i++){//j=column
+            swap(ar[i][j],ar[n-i-1][j]);
+        }
+    }
+    for(int i=0;i<m;i++){//i=rows
+        for(int j=0;j<n;j++){//j=column
+            cout<<ar[i][j];
+        }
+        cout<<endl;
+    }
+}
